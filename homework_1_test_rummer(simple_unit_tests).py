@@ -30,7 +30,7 @@ import unittest
 class RunnerTest(unittest.TestCase):
     def test_walk(self):
         self.alex = runner.Runner('Alex')
-        for i in range(10):
+        for _ in range(10):
             self.alex.walk()
         self.assertEqual(self.alex.distance, 50)
 
