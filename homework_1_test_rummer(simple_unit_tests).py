@@ -29,24 +29,24 @@ import unittest
 
 class RunnerTest(unittest.TestCase):
     def test_walk(self):
-        self.alex = runner.Runner('Alex')
+        alex = runner.Runner('Alex')
         for _ in range(10):
-            self.alex.walk()
-        self.assertEqual(self.alex.distance, 50)
+            alex.walk()
+        self.assertEqual(alex.distance, 50)
 
     def test_run(self):
-        self.oleg = runner.Runner('Oleg')
+        oleg = runner.Runner('Oleg')
         for _ in range(10):
-            self.oleg.run()
-        self.assertEqual(self.oleg.distance, 100)
+            oleg.run()
+        self.assertEqual(oleg.distance, 100)
 
     def test_challenge(self):
-        self.vica = runner.Runner('Vica')
-        self.marina = runner.Runner('Marina')
+        vica = runner.Runner('Vica')
+        marina = runner.Runner('Marina')
         for _ in range(10):
-            self.vica.run()
-            self.marina.walk()
-        self.assertNotEqual(self.vica, self.marina)
+            vica.run()
+            marina.walk()
+        self.assertNotEqual(vica.distance, marina.distance)
 
 
 if __name__ == '__main__':
