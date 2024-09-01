@@ -38,7 +38,7 @@ class RunnerTest(unittest.TestCase):
         self.oleg = runner.Runner('Oleg')
         for _ in range(10):
             self.oleg.run()
-        self.assertEqual(self.oleg, 100)
+        self.assertEqual(self.oleg.distance, 100)
 
     def test_challenge(self):
         self.vica = runner.Runner('Vica')
